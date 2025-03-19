@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #0292f8, #2575fc);
+        }
+        .container {
+            width: 400px;
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+            display: block; /* Make labels block elements */
+            margin-top: 10px; /* Add some space above labels */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender-label {
+            display: inline-block; /* Align radio button labels inline */
+            margin-left: 5px; /* Add space between radio button and label */
+        }
+        .buttons {
+            text-align: center;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit {
+            background-color: #29df11;
+            color: white;
+        }
+        .reset {
+            background-color: #f20a16;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male" class="gender-label">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female" class="gender-label">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other" class="gender-label">Other</label>
+            
+            <label>Hobbies:</label>
+            <input type="checkbox" id="coding" name="hobbies" value="coding">
+            <label for="coding" class="gender-label">Coding</label>
+            <input type="checkbox" id="cricket" name="hobbies" value="cricket">
+            <label for="cricket" class="gender-label">Cricket</label>
+            
+            <label for="domain">Domain:</label>
+            <select id="domain" name="domain" required>
+                <option value="" disabled selected>Select your domain</option>
+                <option value="data_science">Data Science</option>
+                <option value="web_development">Web Development</option>
+            </select>
+            
+            <div class="buttons">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
